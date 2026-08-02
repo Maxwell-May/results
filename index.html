@@ -50,10 +50,17 @@
   h2::after{content:"";flex:1;height:1px;background:var(--hair);}
   section{padding-bottom:2.8rem;}
 
+  /* proof: two clients, side by side */
+  .proofs{display:grid;grid-template-columns:1fr;gap:2.2rem;}
+  .proof-h{font-size:.72rem;font-family:var(--mono);letter-spacing:.11em;text-transform:uppercase;
+    color:var(--acc-deep);margin-bottom:.55rem;}
+  .proof-h b{color:var(--ink);font-weight:600;}
+
   /* receipt */
   .frame{background:var(--surface);border:1px solid var(--hair);border-radius:10px;overflow:hidden;
     box-shadow:0 1px 2px rgb(22 24 28 / .05), 0 18px 48px -30px rgb(22 24 28 / .25);}
   .frame img{display:block;width:100%;height:auto;}
+  .proofs .frame img{width:100%;height:auto;}
   .frame .slot{display:grid;place-items:center;text-align:center;gap:.35rem;min-height:300px;padding:2rem;
     background:repeating-linear-gradient(45deg,transparent,transparent 12px,var(--acc-wash) 12px,var(--acc-wash) 24px);}
   .frame .slot b{font-size:.9rem;color:var(--ink);}
@@ -114,24 +121,36 @@
         <a href="https://linkedin.com/in/Maxwell-may" target="_blank" rel="noopener">linkedin.com/in/Maxwell-may</a>
       </div>
     </div>
-    <p class="intro">I run organic search end to end for two brands, as sole consultant. This page is just the numbers: every figure below traces to Google Search Console, GA4, or Ahrefs, and I will walk through the raw reporting on request.</p>
+    <p class="intro">I run organic search end to end for two brands: Electric Avenue PNW, a licensed electrical contractor, and Essance Skincare, a DTC brand on Shopify. This page is just the numbers: every figure below traces to Google Search Console, GA4, or Ahrefs, and I will walk through the raw reporting on request.</p>
   </header>
 
   <section>
-    <h2>The headline result</h2>
-    <figure>
-      <div class="frame">
-        <img src="ai-overview.png" alt="Google AI results for 'emergency electrician portland oregon' listing Electric Avenue LLC first among top 24/7 emergency electricians" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-        <div class="slot" style="display:none">
-          <b>ai-overview.png goes here</b>
-          <span>drop the screenshot into this folder</span>
+    <h2>Proof</h2>
+    <div class="proofs">
+
+      <figure>
+        <div class="proof-h"><b>Electric Avenue PNW</b> · AI search</div>
+        <div class="frame">
+          <img src="ai-overview.png" alt="Google AI results for 'emergency electrician portland oregon' listing Electric Avenue LLC first among top 24/7 emergency electricians">
         </div>
-      </div>
-      <figcaption class="cap">
-        <span>Google search: "emergency electrician portland oregon" · AI results, August 2026</span>
-        <span><b>Electric Avenue LLC</b> listed first</span>
-      </figcaption>
-    </figure>
+        <figcaption class="cap">
+          <span>"emergency electrician portland oregon" · Aug 2026</span>
+          <span><b>Listed first</b></span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="proof-h"><b>Essance Skincare</b> · Shopify rebuild</div>
+        <div class="frame">
+          <img src="essance-store.png" alt="Essance Skincare best sellers collection page showing product cards with images, ratings, descriptions and prices">
+        </div>
+        <figcaption class="cap">
+          <span>essanceskincare.com · collection page</span>
+          <span><b>Storefront rebuilt</b></span>
+        </figcaption>
+      </figure>
+
+    </div>
   </section>
 
   <section>
@@ -180,6 +199,11 @@
           <td>Site health score after technical cleanup</td>
           <td><span class="brandtag">Essance Skincare</span> · <span class="src">Ahrefs</span></td>
           <td><span class="num">33 → 93</span></td>
+        </tr>
+        <tr>
+          <td>Monthly search impressions</td>
+          <td><span class="brandtag">Essance Skincare</span> · <span class="src">GSC</span></td>
+          <td><span class="num">187k</span></td>
         </tr>
         <tr>
           <td>Clicks / impressions since taking over search in June</td>

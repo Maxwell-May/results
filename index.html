@@ -107,6 +107,24 @@
   .foot-links a{border-bottom:1px solid var(--hair);}
   .foot-links a:hover{color:var(--acc);border-color:var(--acc);}
   .foot-note{margin-top:.9rem;font-size:.8rem;color:var(--dim);}
+  @media print{
+    @page{ size:letter; margin:0.45in; }
+    body{background:#fff;font-size:9.6pt;line-height:1.42;}
+    .wrap{max-width:none;padding-inline:0;}
+    header{padding-block:0 0;}
+    .intro{padding-block:.7rem 1rem;font-size:9.8pt;}
+    section{padding-bottom:1rem;}
+    h2{margin-bottom:.5rem;}
+    .proofs{gap:.9rem;}
+    .frame{box-shadow:none;}
+    .proofs .frame{width:max-content;max-width:100%;}
+    .proofs .frame img{max-height:2.35in;width:auto;max-width:100%;}
+    figure{break-inside:avoid;}
+    tr{break-inside:avoid;}
+    .pub{break-inside:avoid;padding:.42rem 0;}
+    footer{padding-block:.9rem 0;break-inside:avoid;}
+    a{color:inherit;}
+  }
 </style>
 </head>
 <body>
@@ -142,10 +160,10 @@
       <figure>
         <div class="proof-h"><b>Essance Skincare</b> · Shopify rebuild</div>
         <div class="frame">
-          <img src="essance-store.png" alt="Essance Skincare best sellers collection page showing product cards with images, ratings, descriptions and prices">
+          <img src="essance-home.png" alt="Essance Skincare homepage hero and Signature Formulas collection grid, rebuilt on Shopify">
         </div>
         <figcaption class="cap">
-          <span>essanceskincare.com · collection page</span>
+          <span>essanceskincare.com · homepage</span>
           <span><b>Storefront rebuilt</b></span>
         </figcaption>
       </figure>

@@ -90,9 +90,15 @@
   /* writing list */
   .pub{display:flex;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--hair);}
   .pub-kind{flex:0 0 96px;font-family:var(--mono);font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--acc-deep);}
-  .pub-t{font-weight:600;color:var(--ink);font-size:.94rem;line-height:1.35;}
-  .pub:hover .pub-t{color:var(--acc);}
-  .pub-dom{margin-left:auto;font-family:var(--mono);font-size:.68rem;color:var(--dim);white-space:nowrap;}
+  .pub-t{font-weight:600;color:var(--ink);font-size:.94rem;line-height:1.35;
+    text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px;text-decoration-thickness:1px;
+    transition:color 150ms ease, text-decoration-color 150ms ease;}
+  .pub:hover .pub-t{color:var(--acc);text-decoration-color:var(--acc);}
+  .pub-dom{margin-left:auto;font-family:var(--mono);font-size:.68rem;color:var(--dim);white-space:nowrap;
+    display:inline-flex;align-items:center;gap:.35rem;transition:color 150ms ease;}
+  .pub:hover .pub-dom{color:var(--acc);}
+  .pub-dom::after{content:"\2197";font-size:.78rem;}
+  .linkhint{font-size:.83rem;color:var(--muted);margin:-.55rem 0 .9rem;}
   @media (max-width:640px){
     .pub{flex-wrap:wrap;gap:.25rem .75rem;}
     .pub-kind{flex-basis:100%;}
@@ -233,7 +239,8 @@
   </section>
 
   <section>
-    <h2>Published work</h2>
+    <h2>Published work examples</h2>
+    <p class="linkhint">Click any title to read the live piece.</p>
     <a class="pub" href="https://essanceskincare.com/blogs/essance-skincare-blogs-articles/buy-dragon-s-blood-top-skincare-resin-supplements-buyer-s-guide" target="_blank" rel="noopener">
       <span class="pub-kind">Buying guide</span>
       <span class="pub-t">Buy Dragon's Blood: Top Skincare, Resin &amp; Supplements</span>
